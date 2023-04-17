@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File-Sharing App</title>
+    <link rel="stylesheet" href="css/style-page.css">
+</head>
+<body>
+    <section class="upload-container">
+        <div class="drop-zone">
+            <div class="icon-container">
+                <img src="css/file.svg" alt="file-icon" class="center" draggable="false">
+                <img src="css/file.svg" alt="file-icon" class="left" draggable="false">
+                <img src="css/file.svg" alt="file-icon" class="right" draggable="false">
+            </div>
+            <input type="file" id="input-file">
+            <div class="title">Drop your Files here or <span class="browseBtn">browse</span></div>
+        </div>
+        <div class="progress-container">
+            <div class="bg-progress"></div>
+            <div class="inner-container">
+                <div class="title">Uploading...</div>
+                <div class="percent-container"> <span id="percent">0</span>%</div>
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+        <div class="sharing-container">
+            <p class="expire">Link Expires in 24Hrs.</p>
+            <div class="input-container">
+                <input type="text" id="fileURL"readonly>
+                <img src="css/copy-icon.svg" alt="copy-icon" id="copyBtn">
+            </div>
+            <p class="expire">Or send via Email.</p>
+            <div class="email-container">
+                <form id="email-form">
+                    <div class="filled">
+                        <label for="sender">Your Email: </label>
+                        <input type="email" name="emailFrom" id="sender" required>
+                    </div>
+                    <div class="filled">
+                        <label for="receiver">Receiver's Email: </label>
+                        <input type="email" name="emailTo" id="receiver" required>
+                    </div>
+                    <button type="submit"> Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <img class="upload-vector" src="css/undraw-upload.svg" alt="upload-img">
+    <div class="toast">
+        Copied to Clipboard!
+    </div>
+    <script src="css/index.js"></script>
+</body>
+</html>
